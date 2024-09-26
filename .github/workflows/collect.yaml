@@ -1,12 +1,12 @@
 name: Collect
 on:
-  # run the workflow at 22:00 UTC (06:00 in the +8 timezone)
+  # run the workflow at 21:30 UTC (05:30 in the +8 timezone)
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "30 21 * * *"
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.repository }}
+  group: ${{ github.repository }}-collect
   cancel-in-progress: true
 
 env:
